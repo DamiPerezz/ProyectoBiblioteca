@@ -45,7 +45,7 @@ public:
     void marcarComoNoDisponible(bool valor = true) {
         disponible = !valor;
 
-        /*: Este mÃ©todo permite marcar el libro como no disponible. Si se llama con valor igual a true,
+        /*: Este metodo permite marcar el libro como no disponible. Si se llama con valor igual a true,
          * el libro se marcarÃ¡ como no disponible; si se llama con valor igual a false o no se proporciona ningÃºn valor,
          * el libro se marcarÃ¡ como disponible (esto se hace invirtiendo el valor actual de disponible).*/
     }
@@ -64,7 +64,7 @@ private:
 public:
     //Constructores de la clase Usuario
 
-    //Constructor vacÃ­o
+    //Constructor vacio
     Usuario() : nombre(""), apellidos(""), dni(""), numLibrosEnHistorial(0) {}
 
     //Constructor parametrizado
@@ -89,18 +89,18 @@ public:
 
     //MÃ©todos
 
-    //MÃ©todo para determinar el numero de libros que se encuentran en el historial del usuario
+    //Metodo para determinar el numero de libros que se encuentran en el historial del usuario
     int getNumLibrosEnHistorial() {
         return numLibrosEnHistorial;
     }
 
-    //MÃ©todo para asignar un libro a un usuario
+    //Metodo para asignar un libro a un usuario
     void asignarLibroActual(Libro libro) {
         libroActual = libro;
     }
 
 
-    //MÃ©todo para agregar un libro al historial de libros de un usuario
+    //Metodo para agregar un libro al historial de libros de un usuario
     void agregarAlHistorial(Libro libro) {
         if (numLibrosEnHistorial < MAX_LIBROS) {
             historial[numLibrosEnHistorial] = libro;
@@ -108,7 +108,7 @@ public:
         }
     }
 
-    //MÃ©todo para coger uno de los libros que se encuentran en el historial de un usuario
+    //Metodo para coger uno de los libros que se encuentran en el historial de un usuario
     Libro getLibroHistorial(int indice) {
         if (indice >= 0 && indice < numLibrosEnHistorial) {
             return historial[indice];
@@ -116,7 +116,7 @@ public:
         return Libro();
     }
 
-    //MÃ©todo para hacer que el libro vuelva a estar disponible al devolverse
+    //Metodo para hacer que el libro vuelva a estar disponible al devolverse
     bool devolverLibro(string titulo) {
         for (int i = 0; i < numLibrosEnHistorial; i++) {
             if (historial[i].getTitulo() == titulo) {
